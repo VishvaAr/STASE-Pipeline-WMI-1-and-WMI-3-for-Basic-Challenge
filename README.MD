@@ -33,7 +33,7 @@ run_wmi3.sh: Execution script. Runs KLEE with --libc=uclibc and --posix-runtime 
 ## How to Run:
 
 ./build_wmi3.sh
-./run_wmi.sh
+./run_wmi3.sh
 
 ## Expected Output:
 KLEE: ERROR: ../metalogin.c:48: memory error: out of bound pointer
