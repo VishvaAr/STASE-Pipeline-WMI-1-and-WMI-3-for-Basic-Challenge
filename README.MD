@@ -14,9 +14,9 @@ Free: The object is freed, but the global pointer (g_session.current_avatar) rem
 
 Heap Reuse (The Setup): The attacker allocates a new object (simulated via set_start_location) that occupies the exact same memory slot as the freed avatar.
 
-Payload Injection: The attacker writes malicious data into this slot. The stale pointer now interprets this data as valid internal pointers (e.g., avatar->username).
+Injection: The attacker writes malicious data into this slot. The stale pointer now interprets this data as valid internal pointers (avatar->username).
 
-Trigger: The program calls free() on the stale pointer again. Instead of freeing valid heap memory, it tries to free the address specified by the attacker (e.g., a stack address or kernel pointer).
+Trigger: The program calls free() on the stale pointer again. Instead of freeing valid heap memory, it tries to free the address specified by the attacker (stack address or kernel pointer).
 
 
 ## Files:
@@ -33,7 +33,6 @@ run_wmi3.sh: Execution script. Runs KLEE with --libc=uclibc and --posix-runtime 
 ## How to Run:
 
 ./build_wmi3.sh
-
 ./run_wmi.sh
 
 ## Expected Output:
