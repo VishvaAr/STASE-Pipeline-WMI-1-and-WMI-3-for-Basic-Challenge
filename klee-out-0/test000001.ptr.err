@@ -1,0 +1,16 @@
+Error: memory error: out of bound pointer
+File: ./metalogin.c
+Line: 48
+assembly.ll line: 8015
+State: 1
+Stack: 
+	#000008015 in items_remove_by_obj(137352489992208, 3405691582) at ./metalogin.c:48
+	#100007937 in inventory_remove_by_obj(3405691582) at ./metalogin.c:83
+	#200007874 in __klee_posix_wrapped_main() at driver_wmi3_arbfree.c:53
+	#300006146 in __user_main(1, 137354301931520, 137354301931536) at src/runtime/POSIX/klee_init_env.c:245
+	#400000600 in __uClibc_main(137338522959872, 1, 137354301931520, 0, 0, 0, 0) at libc/misc/internals/__uClibc_main.c:401
+	#500000765 in main(1, 137354301931520)
+Info: 
+	address: 136119498833944
+	next: object at 136108761415680 of size 4
+		MO7015[4] allocated at __klee_posix_wrapped_main():  %1 = alloca i32, align 4

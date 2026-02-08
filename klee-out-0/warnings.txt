@@ -1,0 +1,10 @@
+KLEE: WARNING: undefined reference to function: __isoc99_scanf
+KLEE: WARNING: undefined reference to variable: black_sun_member_access_codes
+KLEE: WARNING: undefined reference to variable: black_sun_member_usernames
+KLEE: WARNING: Unable to find size for global variable: black_sun_member_usernames (use will result in out of bounds access)
+KLEE: WARNING: Unable to find size for global variable: black_sun_member_access_codes (use will result in out of bounds access)
+KLEE: WARNING ONCE: calling external: syscall(16, 0, 21505, 136143658024960) at src/runtime/POSIX/fd.c:997 10
+KLEE: WARNING ONCE: Alignment of memory from call "malloc" is not modelled. Using alignment of 8.
+KLEE: WARNING ONCE: calling __klee_posix_wrapped_main with extra arguments.
+KLEE: WARNING ONCE: calling external: printf(137338642497536) at ./metalogin.c:440 1
+KLEE: WARNING ONCE: Alignment of memory from call "calloc" is not modelled. Using alignment of 8.
